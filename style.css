@@ -19,14 +19,91 @@
 
 body {
     font-family: sans-serif;
-    background-image:
-        linear-gradient(rgba(5, 7, 10, 0.7), rgba(5, 7, 10, 0.7)),
-        /*url(https://media.contentapi.ea.com/content/dam/masseffect/common/me-section-bg-galaxy-background-xl.jpg.adapt.320w.jpg);*/;
-    background-size: cover;
-    background-position: center;
     color: #a3c2e0;
     overflow: hidden;
     height: 100vh;
+    width: 100%;
+    height: 100%;
+
+    /* Background pattern sourced from Uiverse.io
+       Original creator: qhns3
+       https://uiverse.io/qhns3/stupid-lizard-4 */
+
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.1);
+
+    background-image:
+        linear-gradient(
+            -90deg,
+            transparent calc(var(--gap) - var(--line)),
+            var(--color) calc(var(--gap) - var(--line) + 1px),
+            var(--color) var(--gap)
+        ),
+        linear-gradient(
+            0deg,
+            transparent calc(var(--gap) - var(--line)),
+            var(--color) calc(var(--gap) - var(--line) + 1px),
+            var(--color) var(--gap)
+        );
+    background-size: var(--gap) var(--gap);
+}
+
+/* Scanline effect inspired by work from meduzen (Mhedi)
+   Originally published on CodePen, modified for this page
+   https://codepen.io/meduzen/pen/zxbwRV */
+
+.scanlines {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+}
+
+.scanlines::before,
+.scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Static scanline pattern */
+.scanlines::after {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 51%
+    );
+    background-size: 10% 8px;
+    animation: scan-static 1s steps(24) infinite;
+}
+
+.scanlines::before {
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    animation: scan-move 6s linear infinite;
+}
+
+/* Keyframes */
+@keyframes scan-static {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes scan-move {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(200%);
+    }
 }
 
 .wrapper {
@@ -44,9 +121,7 @@ body {
 .mainPanel,
 .rightPanel {
     background: rgba(13, 20, 30, 0.85);
-    backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 204, 255, 0.15);
-    box-shadow: 0 0 15px rgba(0, 204, 255, 0.05);
     padding: 1.5rem;
     position: relative;
 
@@ -58,6 +133,8 @@ body {
         0 100%,
         0 20px
     );
+
+    transform: translateZ(0);
 }
 
 .sidePanel,
@@ -65,7 +142,6 @@ body {
 .mainPanel,
 .leftPanel {
     background: rgba(13, 20, 30, 0.85);
-    backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 204, 255, 0.3);
     box-shadow: 0 0 15px rgba(0, 204, 255, 0.1);
 }
