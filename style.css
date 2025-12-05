@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Quantico", sans-serif;
     color: #a3c2e0;
     overflow: hidden;
     height: 100vh;
@@ -144,6 +144,14 @@ body {
     background: rgba(13, 20, 30, 0.85);
     border: 1px solid rgba(0, 204, 255, 0.3);
     box-shadow: 0 0 15px rgba(0, 204, 255, 0.1);
+}
+
+h1,
+h2,
+h3,
+.logo,
+.mission-title {
+    font-family: "Orbitron", sans-serif;
 }
 
 /* ======= Side Panel =======*/
@@ -297,7 +305,6 @@ body {
 .card:hover {
     background: rgba(0, 204, 255, 0.15);
     border: 1px solid #00ccff;
-    box-shadow: 0 0 10px rgba(0, 204, 255, 0.4);
     cursor: pointer;
     transform: scale(1.02);
 }
