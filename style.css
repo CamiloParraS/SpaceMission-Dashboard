@@ -204,6 +204,21 @@ h3,
     color: #a3c2e0;
 }
 
+.sidePanel li.current-page:hover::before {
+    display: none;
+}
+
+.sidePanel li.current-page {
+    background: linear-gradient(90deg, rgba(0, 204, 255, 0.2), transparent);
+    border-left: 4px solid #00ccff;
+    padding-left: 15px;
+}
+
+.sidePanel li.current-page a {
+    color: #fff;
+    text-shadow: 0 0 8px #00ccff;
+}
+
 /* ======= Top Panel =======*/
 
 .topPanel {
@@ -309,8 +324,9 @@ h3,
 }
 
 .card:hover {
-    background: rgba(0, 204, 255, 0.12);
+    background: rgba(0, 204, 255, 0.05);
     transform: scale(1.001);
+    box-shadow: inset 0 0 5px rgba(0, 204, 255, 0.4);
 }
 
 .card.priority {
@@ -414,6 +430,7 @@ h3,
 
 /* ====== ICONS ====== */
 
+/* Placeholder Icon */
 .material-symbols-outlined {
     font-size: 34px;
     font-variation-settings:
