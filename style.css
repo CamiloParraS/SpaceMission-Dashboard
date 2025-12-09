@@ -501,13 +501,16 @@ h3,
 
 .rightPanel h3 {
     margin-bottom: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-primary-dark);
+    padding-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 .squad-member {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-medium);
     padding-bottom: 5px;
     border-bottom: 1px dashed rgba(163, 194, 224, var(--opacity-medium));
 }
@@ -557,6 +560,66 @@ h3,
     border-radius: var(--border-radius-small);
     border: 1px solid var(--color-transparent);
     text-align: right;
+}
+
+/*.diagnostics {
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-small);
+}*/
+
+.diag-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+}
+
+.diag-label {
+    flex: 0 0 80px;
+    color: var(--color-secondary);
+}
+
+.diag-value {
+    flex: 0 0 45px;
+    text-align: right;
+}
+
+.diag-label,
+.diag-value {
+    display: inline-block;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.diag-bar {
+    height: 8px;
+    background: var(--bg-color);
+    border: 1 px solid rgba(0, 0, 0, var(--opacity-high));
+    padding: 1px;
+    position: relative;
+    flex: 1;
+}
+
+.diag-bar-fill {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    box-shadow: 0 0 8px var(--color-primary);
+}
+
+.diag-row.warning .diag-bar {
+    border-color: rgba(255, 102, 0, var(--opacity-glow));
+}
+
+.diag-row.warning .diag-bar-fill {
+    background-color: var(--color-priority);
+    box-shadow: 0 0 8px var(--color-priority);
+}
+
+.diag-row.warning .diag-value {
+    color: var(--color-priority);
 }
 
 /* ====== ICONS ====== */
