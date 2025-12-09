@@ -359,7 +359,7 @@ h3,
 .main-text {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-medium);
     text-align: justify;
 }
 
@@ -367,6 +367,31 @@ h3,
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 204, 255, 0.02);
+    padding: 6px 8px;
+    margin-bottom: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    border: rgba(0, 204, 255, var(--opacity-faint));
+}
+
+.search-container input[type="search"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-secondary);
+    width: 100%;
+    font-size: 0.95rem;
+    font-family: var(--font-primary);
+}
+.search-container:focus-within {
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.12);
+    border-color: var(--color-primary);
 }
 
 .card {
