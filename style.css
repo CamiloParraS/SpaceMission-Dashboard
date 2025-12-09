@@ -39,7 +39,7 @@
     --shadow-glow-medium: 15px;
     --shadow-glow-high: 20px;
     --shadow-glow-xl: 25px;
-    --icon-size: 34px;
+    --icon-size: 28px;
     --avatar-size: 40px;
 
     /* Transitions */
@@ -529,7 +529,7 @@ h3,
     font-size: var(--icon-size);
     font-variation-settings:
         "FILL" 0,
-        "wght" 200,
+        "wght" 400,
         "GRAD" 0,
         "opsz" 24;
 }
