@@ -429,7 +429,7 @@ h3,
     border-left: 3px solid var(--color-primary);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px;
     transition: var(--transition-fast);
     line-height: 1.4;
@@ -482,6 +482,11 @@ h3,
     display: none;
 }
 
+.card-info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .mission-tittle-card {
     font-weight: 700;
     font-size: 1.1rem;
@@ -493,7 +498,6 @@ h3,
     align-self: flex-end;
     margin-top: var(--spacing-medium);
     display: flex;
-    justify-content: flex-end;
 }
 
 .icon {
