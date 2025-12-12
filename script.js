@@ -4,6 +4,11 @@ const alerts = [
   { text: "Distress beacon: Sanctum system" },
   { text: "Cerberus chatter intercepted" },
   { text: "Alliance reconship online" },
+  { text: "Credits stockpile updated: +12,500" },
+  { text: "Element Zero anomaly detected near Ismar Frontier" },
+  { text: "Iridium mining drone recovered (+1,200)" },
+  { text: "Platinum veins located: Ore Belt 7" },
+  { text: "Palladium refinement completed (+850)" },
 ];
 
 const tickerContent = document.getElementById("alert-content");
