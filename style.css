@@ -350,7 +350,7 @@ h3,
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: alert-scroll 155s linear infinite;
+    animation: alert-scroll 555s linear infinite;
 }
 
 @keyframes alert-scroll {
